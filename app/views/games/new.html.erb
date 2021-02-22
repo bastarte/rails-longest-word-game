@@ -1,0 +1,20 @@
+<div class="head container">
+  <h1>New game</h1>
+  <p>Find the longest word</p>
+</div>
+<div class="letters container">
+<!-- <p><%= @letters %></p>
+ -->
+  <ul class=game-letters>
+    <% @letters.each do |letter| %>
+    <li><%= letter.upcase %></li>
+    <% end %>
+  </ul>
+</div>
+
+<div class="form container">
+  <form action="score" method="POST" class="user-form">
+    <input type="text" name="user-answer">
+    <input type="submit" name="submit">
+  </form>
+</div>
